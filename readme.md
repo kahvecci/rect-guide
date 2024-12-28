@@ -25,7 +25,8 @@ pip install PyMuPDF
 2. Update the input PDF filename in the script (currently set to "1.pdf")
 3. Run the script:
 ```bash
-python grid_guide.py
+python grid_guide.py <pdf_file>
+python grid_guide.py example.pdf
 ```
 
 The script will generate a new PDF named "output_grid.pdf" with the grid overlay.
