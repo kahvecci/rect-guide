@@ -8,8 +8,6 @@ import pymupdf as fitz
 import sys
 import os
 
-WIDTH = 595.5
-HEIGHT = 842.25
 
 if len(sys.argv) != 2:
     print("Usage: python grid_guide.py <pdf_file>")
@@ -33,7 +31,10 @@ page = doc[0]
 # draw rect guide line on page
 
 def draw_guide_lines(increment = 50, color = (1, 0, 0), width = 1.4, opacity = 0.8, coor=True):
-    
+
+    WIDTH = page.rect[2]
+    HEIGHT = page.rect[3]
+
     # for positions
 
     vertical_positions = [p for p in range(0, int(HEIGHT), increment)]
